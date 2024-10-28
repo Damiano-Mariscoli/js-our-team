@@ -43,6 +43,8 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+
+//ciclo for per inserire la card ad ogni membro della lista
 for (const member of teamMembers) {
   const card = `
     <div class="col-12 col-md-6 col-lg-4">
@@ -101,7 +103,7 @@ formMember.addEventListener('submit', function(event){
   };
   teamMembers.push(newMember);
 
-  
+  //card che si crea ogni volta che un utente inserisce i suoi dati e clicca submit
   const card = `
     <div class="col-12 col-md-6 col-lg-4">
       <div class="card d-flex flex-row gap-2 bg-black" >
@@ -120,7 +122,6 @@ formMember.addEventListener('submit', function(event){
       </div>
     </div>
   `;
-
   document.querySelector(".row-cols-3").innerHTML += card;
   formMember.classList.add('d-none')
   buttonMember.classList.remove('d-none')
